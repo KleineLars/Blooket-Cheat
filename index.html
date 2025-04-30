@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Script Copy Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #9b4de0;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .sidebar button {
+      background-color: #00d1c1;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0 4px #007e7b;
+    }
+    .menu-item {
+      padding: 10px 0;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+    }
+    .menu-item:hover {
+      background-color: #b86ff9;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 30px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #00d1c1;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Blooket Hub</h1>
+    <button>Play</button>
+    <div class="menu-item">Stats</div>
+    <div class="menu-item">Blooks</div>
+    <div class="menu-item">Market</div>
+    <div class="menu-item">Discover</div>
+    <div class="menu-item">Set Creator</div>
+    <div class="menu-item">My Sets</div>
+    <div class="menu-item">Favorites</div>
+  </div>
+  <div class="content">
+    <h2>Paste Your Script Here</h2>
+    <textarea id="scriptBox">// Your script goes here...</textarea><br>
+    <button class="copy-btn" onclick="copyScript()">Copy Script</button>
+  </div>
+
+  <script>
+    function copyScript() {
+      const textArea = document.getElementById("scriptBox");
+      textArea.select();
+      document.execCommand("copy");
+      alert("Script copied!");
+    }
+  </script>
+</body>
+</html>
