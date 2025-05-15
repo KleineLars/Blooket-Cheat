@@ -1,15 +1,16 @@
-# Disclaimer
+Disclaimer
+This project is provided as is, without any warranties or liability from the developer.
 
-This project is provided as-is, without any guarantees or responsibility from the developer.
+Liability
+The developer is not responsible for any damages, account suspensions, or other consequences resulting from the use of this code. Use it entirely at your own risk.
 
-## Liability
-I am not responsible for any damages, suspensions, or other consequences resulting from the use of this code. Use at your own risk.
+Educational Use Only
+This code is intended for educational and informational purposes only. Improper or unauthorized use may violate the terms of third-party services.
 
-## Educational Purpose
-This code is intended solely for educational and informational purposes. Improper use may violate the terms of external services.
+License and Ownership
+By using this software, you agree that the developer cannot be held liable for any direct or indirect issues or damages.
 
-## License
-By using this code, you agree not to hold the developer liable for any issues or damages.
+Copyright and Distribution
+You are not allowed to copy, share, sell, or redistribute this code without explicit permission from the developer. Unauthorized use or theft is strictly prohibited and may lead to legal action.
 
-Use this software in a responsible and ethical manner!
-
+Use this software responsibly and ethically
