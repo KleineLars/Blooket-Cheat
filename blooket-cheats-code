@@ -37,7 +37,7 @@
             return element;
         }
         let settings,
-            settingsKey = "05konzWasHere";
+            settingsKey = "KleineLarsWasHere";
         const Settings = {
             data: null,
             setItem(k, v) {
