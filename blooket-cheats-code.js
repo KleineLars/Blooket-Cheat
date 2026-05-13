@@ -1,8 +1,6 @@
 (() => {
-    /* --- PASSWORD PROTECTION --- */
     const CORRECT_PASSWORD = "KL1234";
     
-    // Using a temporary iframe for clean prompt/alert functions
     let tempIframe = document.createElement("iframe");
     tempIframe.style.display = "none";
     document.body.append(tempIframe);
@@ -17,7 +15,6 @@
         return; 
     }
     tempIframe.remove();
-    /* --------------------------- */
 
     let iframe = document.querySelector("iframe");
     if (!iframe) {
@@ -26,7 +23,6 @@
         document.body.append(iframe);
     }
     
-    /* By CryptoDude3 */
     if (window.fetch.call.toString() == 'function call() { [native code] }') {
         const call = window.fetch.call;
         window.fetch.call = function () {
@@ -38,7 +34,6 @@
     let latestProcess = -1;
 
     const cheat = (async () => {
-        /* Anti-Suspend By CryptoDude3 */
         if (window.fetch.call.toString() == "function call() { [native code] }") {
             const call = window.fetch.call;
             window.fetch.call = function () {
@@ -60,7 +55,6 @@
             return element;
         }
 
-        // Rest of the original logic starts here
         let settings,
             settingsKey = "05konzWasHere";
         const Settings = {
@@ -72,11 +66,9 @@
             }
         };
 
-        // This is where you paste the rest of your original 1000+ lines
-        // For the sake of this example, I've initialized the GUI start below:
+
         console.log("Cheats loaded successfully with password protection.");
-        
-        // ... (The rest of your original script continues from here) ...
+     
     })();
 })();
 (() => {
@@ -86,7 +78,6 @@
         iframe.style.display = "none";
         document.body.append(iframe);
     }
-    /* By CryptoDude3 */
     if (window.fetch.call.toString() == 'function call() { [native code] }') {
         const call = window.fetch.call;
         window.fetch.call = function () {
@@ -96,7 +87,6 @@
     const timeProcessed = 1732772251920;
     let latestProcess = -1;
     const cheat = (async () => {
-        /* Anti-Suspend By CryptoDude3 */
         if (window.fetch.call.toString() == "function call() { [native code] }") {
             const call = window.fetch.call;
             window.fetch.call = function () {
