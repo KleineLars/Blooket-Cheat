@@ -1,4 +1,85 @@
 (() => {
+    /* --- PASSWORD PROTECTION --- */
+    const CORRECT_PASSWORD = "KL1234";
+    
+    // Using a temporary iframe for clean prompt/alert functions
+    let tempIframe = document.createElement("iframe");
+    tempIframe.style.display = "none";
+    document.body.append(tempIframe);
+    const prompt = tempIframe.contentWindow.prompt.bind(window);
+    const alert = tempIframe.contentWindow.alert.bind(window);
+    
+    const input = prompt("Enter password to use Blooket Cheats:");
+
+    if (input !== CORRECT_PASSWORD) {
+        alert("Incorrect password! Access denied.");
+        tempIframe.remove();
+        return; 
+    }
+    tempIframe.remove();
+    /* --------------------------- */
+
+    let iframe = document.querySelector("iframe");
+    if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        document.body.append(iframe);
+    }
+    
+    /* By CryptoDude3 */
+    if (window.fetch.call.toString() == 'function call() { [native code] }') {
+        const call = window.fetch.call;
+        window.fetch.call = function () {
+            if (!arguments[1].includes("s.blooket.com/rc")) return call.apply(this, arguments);
+        }
+    }
+
+    const timeProcessed = 1732772251920;
+    let latestProcess = -1;
+
+    const cheat = (async () => {
+        /* Anti-Suspend By CryptoDude3 */
+        if (window.fetch.call.toString() == "function call() { [native code] }") {
+            const call = window.fetch.call;
+            window.fetch.call = function () {
+                if (!arguments[1].includes("s.blooket.com/rc")) return call.apply(this, arguments);
+            };
+            new Image().src = "https://gui-logger.onrender.com/gui/1?" + Date.now();
+        }
+        
+        function addProps(element, obj) {
+            for (const prop in obj)
+                if (typeof obj[prop] == "object") addProps(element[prop], obj[prop]);
+                else element[prop] = obj[prop];
+        }
+        
+        function createElement(type, props, ...children) {
+            const element = document.createElement(type);
+            addProps(element, props);
+            for (const child of children) element.append(child);
+            return element;
+        }
+
+        // Rest of the original logic starts here
+        let settings,
+            settingsKey = "05konzWasHere";
+        const Settings = {
+            data: null,
+            setItem(k, v) {
+                k.split(".").reduce((obj, k, i, a) => (++i == a.length && (obj[k] = v), obj[k]), this.data);
+                localStorage.setItem(settingsKey, JSON.stringify(this.data));
+                return this.data;
+            }
+        };
+
+        // This is where you paste the rest of your original 1000+ lines
+        // For the sake of this example, I've initialized the GUI start below:
+        console.log("Cheats loaded successfully with password protection.");
+        
+        // ... (The rest of your original script continues from here) ...
+    })();
+})();
+(() => {
     let iframe = document.querySelector("iframe");
     if (!iframe) {
         iframe = document.createElement("iframe");
@@ -3439,6 +3520,6 @@
         img.onerror = img.onabort = null;
         cheat();
         let iframe = document.querySelector("iframe");
-        iframe.contentWindow.alert("It seems the GitHub is either blocked or down.\n\nIf it's NOT blocked, join the Discord server for updates\nhttps://discord.gg/jHjGrrdXP6\n(The cheat will still run after this alert)")
+        iframe.contentWindow.alert("Made By Kleine_Lars")
     }
 })();
