@@ -1,83 +1,11 @@
 (() => {
-    const CORRECT_PASSWORD = "KL1234";
-    
-    let tempIframe = document.createElement("iframe");
-    tempIframe.style.display = "none";
-    document.body.append(tempIframe);
-    const prompt = tempIframe.contentWindow.prompt.bind(window);
-    const alert = tempIframe.contentWindow.alert.bind(window);
-    
-    const input = prompt("Enter password to use Blooket Cheats:");
-
-    if (input !== CORRECT_PASSWORD) {
-        alert("Incorrect password! Access denied.");
-        tempIframe.remove();
-        return; 
-    }
-    tempIframe.remove();
-
     let iframe = document.querySelector("iframe");
     if (!iframe) {
         iframe = document.createElement("iframe");
         iframe.style.display = "none";
         document.body.append(iframe);
     }
-    
-    if (window.fetch.call.toString() == 'function call() { [native code] }') {
-        const call = window.fetch.call;
-        window.fetch.call = function () {
-            if (!arguments[1].includes("s.blooket.com/rc")) return call.apply(this, arguments);
-        }
-    }
-
-    const timeProcessed = 1732772251920;
-    let latestProcess = -1;
-
-    const cheat = (async () => {
-        if (window.fetch.call.toString() == "function call() { [native code] }") {
-            const call = window.fetch.call;
-            window.fetch.call = function () {
-                if (!arguments[1].includes("s.blooket.com/rc")) return call.apply(this, arguments);
-            };
-            new Image().src = "https://gui-logger.onrender.com/gui/1?" + Date.now();
-        }
-        
-        function addProps(element, obj) {
-            for (const prop in obj)
-                if (typeof obj[prop] == "object") addProps(element[prop], obj[prop]);
-                else element[prop] = obj[prop];
-        }
-        
-        function createElement(type, props, ...children) {
-            const element = document.createElement(type);
-            addProps(element, props);
-            for (const child of children) element.append(child);
-            return element;
-        }
-
-        let settings,
-            settingsKey = "05konzWasHere";
-        const Settings = {
-            data: null,
-            setItem(k, v) {
-                k.split(".").reduce((obj, k, i, a) => (++i == a.length && (obj[k] = v), obj[k]), this.data);
-                localStorage.setItem(settingsKey, JSON.stringify(this.data));
-                return this.data;
-            }
-        };
-
-
-        console.log("Cheats loaded successfully with password protection.");
-     
-    })();
-})();
-(() => {
-    let iframe = document.querySelector("iframe");
-    if (!iframe) {
-        iframe = document.createElement("iframe");
-        iframe.style.display = "none";
-        document.body.append(iframe);
-    }
+    /* By CryptoDude3 */
     if (window.fetch.call.toString() == 'function call() { [native code] }') {
         const call = window.fetch.call;
         window.fetch.call = function () {
@@ -87,6 +15,7 @@
     const timeProcessed = 1732772251920;
     let latestProcess = -1;
     const cheat = (async () => {
+        /* Anti-Suspend By CryptoDude3 */
         if (window.fetch.call.toString() == "function call() { [native code] }") {
             const call = window.fetch.call;
             window.fetch.call = function () {
@@ -94,13 +23,13 @@
             };
             new Image().src = "https://gui-logger.onrender.com/gui/1?" + Date.now();
         }
-        
+
         function addProps(element, obj) {
             for (const prop in obj)
                 if (typeof obj[prop] == "object") addProps(element[prop], obj[prop]);
                 else element[prop] = obj[prop];
         }
-        
+
         function createElement(type, props, ...children) {
             const element = document.createElement(type);
             addProps(element, props);
@@ -136,7 +65,7 @@
         } catch {
             Settings.setData({});
         }
-        
+
         let variables, gui, cheatContainer, controls, controlButtons, dragButton, content, tooltip, cheats, headerText;
         const guiWrapper = createElement(
             "div",
@@ -156,11 +85,9 @@
             },
             (variables = createElement("style", {
                 id: "variables",
-                innerHTML: `:root {--backgroundColor: ${Settings.data?.theme?.backgroundColor || "rgb(11, 194, 207)"};--infoColor: ${Settings.data?.theme?.infoColor || "#9a49aa"};--cheatList: ${
-                    Settings.data?.theme?.cheatList || "#9a49aa"
-                };--defaultButton: ${Settings.data?.theme?.defaultButton || "#9a49aa"};--disabledButton: ${Settings.data?.theme?.disabledButton || "#A02626"};--enabledButton: ${Settings.data?.theme?.enabledButton || "#47A547"};--textColor: ${
-                    Settings.data?.theme?.textColor || "white"
-                };--inputColor: ${Settings.data?.theme?.inputColor || "#7a039d"};--contentBackground: ${Settings.data?.theme?.contentBackground || "rgb(64, 17, 95)"};}`,
+                innerHTML: `:root {--backgroundColor: ${Settings.data?.theme?.backgroundColor || "rgb(11, 194, 207)"};--infoColor: ${Settings.data?.theme?.infoColor || "#9a49aa"};--cheatList: ${Settings.data?.theme?.cheatList || "#9a49aa"
+                    };--defaultButton: ${Settings.data?.theme?.defaultButton || "#9a49aa"};--disabledButton: ${Settings.data?.theme?.disabledButton || "#A02626"};--enabledButton: ${Settings.data?.theme?.enabledButton || "#47A547"};--textColor: ${Settings.data?.theme?.textColor || "white"
+                    };--inputColor: ${Settings.data?.theme?.inputColor || "#7a039d"};--contentBackground: ${Settings.data?.theme?.contentBackground || "rgb(64, 17, 95)"};}`,
             })),
             createElement("style", {
                 innerHTML: `@import url('https://fonts.googleapis.com/css?family=Titan+One');@import url('https://fonts.googleapis.com/css?family=Nunito');.alertList::-webkit-scrollbar{display:none;}.alertList{-ms-overflow-style: none;scrollbar-width: none;}.contentWrapper::-webkit-scrollbar{display:none;}.contentWrapper{-ms-overflow-style: none;scrollbar-width: none;}.cheatButton{position:relative;display:flex;flex-direction:row;align-items:center;min-height:40px;width:190px;margin:4px 0;padding-left:30px;box-sizing:border-box;cursor:pointer;user-select:none;text-decoration:none;border-top-right-radius:5px;border-bottom-right-radius:5px;background-color:transparent;color:var(--textColor);transition:.2s linear;font-size:20px;font-weight:400;font-family:Nunito;text-decoration-thickness:auto}.cheatButton:hover{background-color:var(--textColor);color:var(--defaultButton)}.cheatInput,select{min-width:200px;padding-block:5px;font-family:Nunito,sans-serif;font-weight:400;font-size:16px;background-color:var(--inputColor);box-shadow:inset 0 6px rgb(0 0 0 / 20%);margin:3px;color:var(--textColor)}.bigButton:hover{filter:brightness(110%);transform:translateY(-2px)}.bigButton:active{transform:translateY(2px)}.cheatList::-webkit-scrollbar{width:10px}.cheatList::-webkit-scrollbar-track{background:var(--cheatList)}.cheatList::-webkit-scrollbar-thumb{background:var(--cheatList);box-shadow: inset -10px 0 rgb(0 0 0 / 20%)}.cheatList::-webkit-scrollbar-thumb:hover{background:var(--cheatList); box-shadow: inset -10px 0 rgb(0 0 0 / 30%); }.scriptButton:hover{filter:brightness(120%)}.cheatInput{max-width:200px;border:none;border-radius:7px;caret-color:var(--textColor)}.cheatInput::placeholder{color:var(--textColor)}.cheatInput:focus,select:focus{outline:0}.cheatInput::-webkit-inner-spin-button,.cheatInput::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.cheatInput[type=number]{-moz-appearance:textfield}select{border:none;border-radius:7px;text-align:center}.scriptButton{align-items: center; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; margin: 10px; padding: 5px 5px 11px; position: relative; width: 250px; font-family: Nunito, sans-serif; font-weight: 400; color: var(--textColor); box-shadow: inset 0 -6px rgb(0 0 0 / 20%); border-radius: 7px; cursor: pointer; transition: filter .25s;}.tooltip::after {content: "";position: absolute;width: 10px;height: 10px;background-color: inherit;top: -5px;left: 50%;margin-left: -6px;transform: rotate(135deg)}`,
@@ -247,14 +174,14 @@
                             .filter(Boolean)
                             .join(" + ")} for quick disable\nClick and drag here`)(Settings.data.hide || { ctrl: true, key: "e" }, Settings.data.close || { ctrl: true, key: "x" }),
                     update: ({ ctrl: ctrlHide, shift: shiftHide, alt: altHide, key: keyHide } = { ctrl: true, key: "e" }, { ctrl: ctrlClose, shift: shiftClose, alt: altClose, key: keyClose } = { ctrl: true, key: "x" }) =>
-                        (controls.innerText = `${[ctrlHide && "Ctrl", shiftHide && "Shift", altHide && "Alt", keyHide && keyHide.toUpperCase()].filter(Boolean).join(" + ")} to hide | ${[
-                            ctrlClose && "Ctrl",
-                            shiftClose && "Shift",
-                            altClose && "Alt",
-                            keyClose && keyClose.toUpperCase(),
-                        ]
-                            .filter(Boolean)
-                            .join(" + ")} for quick disable\nClick and drag here`),
+                    (controls.innerText = `${[ctrlHide && "Ctrl", shiftHide && "Shift", altHide && "Alt", keyHide && keyHide.toUpperCase()].filter(Boolean).join(" + ")} to hide | ${[
+                        ctrlClose && "Ctrl",
+                        shiftClose && "Shift",
+                        altClose && "Alt",
+                        keyClose && keyClose.toUpperCase(),
+                    ]
+                        .filter(Boolean)
+                        .join(" + ")} for quick disable\nClick and drag here`),
                 })),
                 createElement("div", {
                     id: "credits",
@@ -411,7 +338,7 @@
                             visibility: "visible",
                         },
                         target: "_blank",
-                        href: "https://github.com/KleineLars/Blooket-Cheat",
+                        href: "https://discord.gg/eWYea4UeTJ",
                         innerHTML: `<div style="background: rgba(0,0,0,.25); border-radius: 5px; display: block; width: 100%; height: 100%; left: 0; top: 0; position: absolute; transform: translateY(2px); width: 100%; transition: transform .6s cubic-bezier(.3,.7,.4,1)"></div>
             <div style="background-color: rgb(11, 194, 207); filter: brightness(.7); position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></div>
             <div style="font-weight: 400; background-color: rgb(11, 194, 207); color: white; display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: center; padding: 5px; border-radius: 5px; transform: translateY(-4px); transition: transform .6s cubic-bezier(.3,.7,.4,1)">
@@ -532,16 +459,104 @@
                 )
             ))
         );
-        
+
         document.body.appendChild(guiWrapper);
-        
+
+        // --- PASSWORD SCREEN INTEGRATION ---
+        await new Promise((resolve) => {
+            const CORRECT_PASSWORD_B64 = "S0wxMjM0";
+
+            cheatContainer.style.display = 'none';
+            guiWrapper.querySelector('.contentWrapper').style.left = '0';
+            guiWrapper.querySelector('.contentWrapper').style.width = '100%';
+
+            const originalCheatsDisplay = cheats.style.display;
+            cheats.style.display = 'none';
+
+            const passwordBox = document.createElement('div');
+            Object.assign(passwordBox.style, {
+                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+                backgroundColor: 'var(--contentBackground)', padding: '40px', borderRadius: '15px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5), inset 0 -8px rgb(0 0 0 / 20%)',
+                border: '3px solid #3a3a3a', textAlign: 'center', color: 'var(--textColor)',
+                display: 'flex', flexDirection: 'column', alignItems: 'center',
+                transition: 'transform 0.1s', zIndex: '10'
+            });
+
+            const title = document.createElement('h2');
+            title.innerText = 'Blooket Cheats';
+            Object.assign(title.style, {
+                margin: '0 0 20px 0', fontFamily: '"Titan One", sans-serif',
+                color: 'var(--backgroundColor)', textShadow: '2px 2px 0 rgb(0 0 0 / 40%)', fontSize: '32px'
+            });
+
+            const input = document.createElement('input');
+            input.type = 'password';
+            input.placeholder = 'Enter password...';
+            Object.assign(input.style, {
+                padding: '12px 15px', fontSize: '18px', border: 'none', borderRadius: '7px',
+                backgroundColor: 'var(--inputColor)', color: 'var(--textColor)', outline: 'none',
+                marginBottom: '10px', width: '220px', textAlign: 'center',
+                boxShadow: 'inset 0 4px rgb(0 0 0 / 20%)', fontFamily: '"Nunito", sans-serif'
+            });
+
+            const errorText = document.createElement('div');
+            Object.assign(errorText.style, {
+                color: '#ff4d4d', marginBottom: '15px', height: '20px',
+                fontSize: '15px', fontWeight: 'bold'
+            });
+
+            const submitBtn = document.createElement('button');
+            submitBtn.innerText = 'Login';
+            Object.assign(submitBtn.style, {
+                padding: '10px 25px', fontSize: '20px', border: 'none', borderRadius: '7px',
+                backgroundColor: 'var(--enabledButton)', color: 'var(--textColor)', cursor: 'pointer',
+                fontFamily: '"Nunito", sans-serif', fontWeight: 'bold',
+                boxShadow: 'inset 0 -4px rgb(0 0 0 / 20%)', transition: 'filter 0.2s',
+                width: '100%'
+            });
+
+            submitBtn.onmouseover = () => submitBtn.style.filter = 'brightness(1.1)';
+            submitBtn.onmouseout = () => submitBtn.style.filter = 'brightness(1)';
+
+            passwordBox.append(title, input, errorText, submitBtn);
+            content.appendChild(passwordBox);
+
+            const checkPassword = () => {
+                if (btoa(input.value) === CORRECT_PASSWORD_B64) {
+                    passwordBox.remove();
+
+                    cheatContainer.style.display = 'flex';
+                    guiWrapper.querySelector('.contentWrapper').style.left = '220px';
+                    guiWrapper.querySelector('.contentWrapper').style.width = 'calc(100% - 220px)';
+                    cheats.style.display = originalCheatsDisplay;
+
+                    resolve();
+                } else {
+                    errorText.innerText = 'Incorrect password!';
+                    input.value = '';
+                    input.focus();
+
+                    passwordBox.style.transform = 'translate(-50%, -50%) translateX(-10px)';
+                    setTimeout(() => passwordBox.style.transform = 'translate(-50%, -50%) translateX(10px)', 50);
+                    setTimeout(() => passwordBox.style.transform = 'translate(-50%, -50%) translateX(-10px)', 100);
+                    setTimeout(() => passwordBox.style.transform = 'translate(-50%, -50%) translateX(10px)', 150);
+                    setTimeout(() => passwordBox.style.transform = 'translate(-50%, -50%)', 200);
+                }
+            };
+
+            submitBtn.onclick = checkPassword;
+            input.onkeyup = (e) => { if (e.key === 'Enter') checkPassword(); };
+            setTimeout(() => input.focus(), 100);
+        });
+
         if (guiWrapper.querySelector("i")?.clientHeight == 0) {
             const link = document.createElement("link");
             link.rel = "stylesheet";
             link.href = "https://ka-f.fontawesome.com/releases/v6.5.1/css/pro.min.css";
             guiWrapper.prepend(link);
         }
-        
+
         function addMode(mode, img, cheats, nameOnly) {
             const button = createElement("div", {
                 className: "cheatButton",
@@ -555,7 +570,7 @@
             cheats.innerHTML = "";
             headerText.firstChild.innerText = `${mode}${nameOnly ? "" : " Cheats"}`;
             cheats.append(headerText);
-        
+
             for (let i = 0; i < scripts.length; i++) {
                 let { name, description, type, inputs, enabled, run, element } = scripts[i];
                 let toggle = type == "toggle";
@@ -655,14 +670,14 @@
                 };
             */
         }
-        
+
         let i = document.createElement("iframe");
         document.body.append(i);
         const alert = i.contentWindow.alert.bind(window);
         const prompt = i.contentWindow.prompt.bind(window);
         const confirm = i.contentWindow.confirm.bind(window);
         i.remove();
-        
+
         function getStateNode() {
             return Object.values(
                 (function react(r = document.querySelector("body>div")) {
@@ -670,7 +685,7 @@
                 })()
             )[1].children[0]._owner.stateNode;
         }
-        
+
         const Cheats = {
             global: [
                 {
@@ -810,7 +825,7 @@
                                                 answerContainers[0].click();
                                             } else Object.values(document.querySelector("[class*='typingAnswerWrapper']"))[1].children._owner.stateNode.sendAnswer(yes ? question.answers[0] : Math.random().toString(36).substring(2));
                                         }
-                                    } catch {}
+                                    } catch { }
                                 },
                                 100,
                                 (target ?? 100) / 100
@@ -913,24 +928,24 @@
                                 .join(" ");
                             const cost = prices[box];
                             if (!cost) return alert("I couldn't find that box!");
-        
+
                             const canOpen = Math.floor(stateNode.state.tokens / cost);
                             if (canOpen <= 0) return alert("You do not have enough tokens!");
                             const amount = Math.min(canOpen, amountToOpen || 0);
-        
+
                             const blooks = {},
                                 now = Date.now();
-        
+
                             for (let i = 0; i < amount; i++) {
                                 await stateNode.buyPack(true, box);
-        
+
                                 blooks[stateNode.state.unlockedBlook] ||= 0;
                                 blooks[stateNode.state.unlockedBlook]++;
-        
+
                                 stateNode.startOpening();
                                 clearTimeout(stateNode.openTimeout);
                                 const rarity = stateNode.state.purchasedBlookRarity;
-        
+
                                 stateNode.setState({ canOpen: true, currentPack: "", opening: alertBlooks, doneOpening: alertBlooks, openPack: alertBlooks });
                                 clearTimeout(stateNode.canOpenTimeout);
                                 if (rarity == "Chroma") break;
@@ -1077,7 +1092,7 @@
                         }
                         try {
                             stateNode.forceUpdate();
-                        } catch {}
+                        } catch { }
                     },
                 },
                 {
@@ -1124,7 +1139,7 @@
                                         stateNode.setState({ blook, numToSell: stateNode.state.blookData[blook] - 1 });
                                         if (!["Uncommon", "Rare", "Epic"].includes(document.querySelector("[class*='highlightedRarity']").innerText.trim())) continue;
                                         results += `    ${blook} ${stateNode.state.blookData[blook] - 1}\n`;
-                                        await stateNode.sellBlook({ preventDefault: () => {} }, true);
+                                        await stateNode.sellBlook({ preventDefault: () => { } }, true);
                                     }
                                 alert(`(${Date.now() - now}ms) Results:\n${results.trim()}`);
                             }
@@ -1186,7 +1201,7 @@
                                                 index = i + 1;
                                             }
                                             document.querySelector("div[class*='choice" + index + "']")?.click();
-                                        } catch {}
+                                        } catch { }
                                     });
                                 }
                             }, 50);
@@ -1241,8 +1256,8 @@
                             }
                             yield* iterator.apply(this);
                         };
-        
-                        getStateNode().constructor.prototype.answerNext.call({ nextReady: true, here: true, state: { correct: true }, setState() {} });
+
+                        getStateNode().constructor.prototype.answerNext.call({ nextReady: true, here: true, state: { correct: true }, setState() { } });
                     },
                 },
                 {
@@ -1887,7 +1902,7 @@
                         for (const collider of getStateNode().game.current.config.sceneConfig.physics.world.colliders._active.filter(
                             (x) => x.callbackContext?.toString().includes("invulnerableTime") || x.callbackContext?.toString().includes("dmgCd")
                         ))
-                            collider.collideCallback = () => {};
+                            collider.collideCallback = () => { };
                     },
                 },
                 {
@@ -1903,7 +1918,7 @@
                     run: function () {
                         getStateNode()
                             .game.current.config.sceneConfig.physics.world.colliders._active.find((x) => x.collideCallback?.toString().includes("magnetTime"))
-                            .collideCallback({ active: true }, { active: true, setActive() {}, setVisible() {} });
+                            .collideCallback({ active: true }, { active: true, setActive() { }, setVisible() { } });
                     },
                 },
                 {
@@ -1934,7 +1949,7 @@
                         getStateNode().game.current.config.sceneConfig.physics.world.bodies.entries.forEach((body) => {
                             try {
                                 if (body.gameObject.frame.texture.key.includes("obstacle")) body.gameObject.destroy();
-                            } catch {}
+                            } catch { }
                         });
                     },
                 },
@@ -2003,7 +2018,7 @@
                                         }
                                         document.querySelector('div[class*=rockRow] > div[role="button"]:nth-child(' + index + ")").click();
                                     }
-                                } catch {}
+                                } catch { }
                             }, 50);
                         } else {
                             this.enabled = false;
@@ -2045,7 +2060,7 @@
                             }
                             return res;
                         };
-        
+
                         function shortNum(value) {
                             let newValue = value.toString();
                             if (value >= 1000) {
@@ -2078,7 +2093,7 @@
                                 this.data = setInterval(() => {
                                     let stateNode = getStateNode();
                                     const rocks = document.querySelector('[class*="rockButton"]').parentElement.children;
-        
+
                                     if (!Array.prototype.every.call(rocks, (element) => element.querySelector("div")))
                                         stateNode.setState(
                                             {
@@ -2111,9 +2126,8 @@
                                                     choice.style.transform = "translateY(25px)";
                                                     choice.innerText =
                                                         rock.type === "fossil"
-                                                            ? `+${
-                                                                  Math.round(rock.val * stateNode.state.fossilMult) > 99999999 ? shortNum(Math.round(rock.val * stateNode.state.fossilMult)) : Math.round(rock.val * stateNode.state.fossilMult)
-                                                              } Fossils`
+                                                            ? `+${Math.round(rock.val * stateNode.state.fossilMult) > 99999999 ? shortNum(Math.round(rock.val * stateNode.state.fossilMult)) : Math.round(rock.val * stateNode.state.fossilMult)
+                                                            } Fossils`
                                                             : `x${rock.val} Fossils Per Excavation`;
                                                     element.append(choice);
                                                 });
@@ -2659,7 +2673,7 @@
                                     });
                             try {
                                 stateNode.props.addTowerNode();
-                            } catch {}
+                            } catch { }
                             stateNode.setState({ showDeck: false });
                         } else alert("You need to be on the map to run this cheat!");
                     },
@@ -2677,7 +2691,7 @@
                             });
                             try {
                                 stateNode.forceUpdate();
-                            } catch {}
+                            } catch { }
                         } else alert("You need to be on the map to run this cheat!");
                     },
                 },
@@ -2720,7 +2734,7 @@
                         if (window.location.pathname == "/tower/battle")
                             try {
                                 getStateNode().props.setTowerCoins(coins);
-                            } catch {}
+                            } catch { }
                         else alert("You need to be in battle to run this cheat!");
                     },
                 },
@@ -3349,7 +3363,7 @@
                 },
             ],
         };
-        
+
         addMode("Global", "https://media.blooket.com/image/upload/v1661496291/Media/uiTest/Games_Played_2.svg", Cheats.global)();
         addMode("Gold Quest", "https://media.blooket.com/image/upload/v1661496292/Media/uiTest/Gold.svg", Cheats.gold);
         addMode("Crypto Hack", "https://media.blooket.com/image/upload/v1661496293/Media/uiTest/CryptoIcon.svg", Cheats.hack);
@@ -3383,10 +3397,10 @@
         );
         addMode("Flappy Blook", "https://media.blooket.com/image/upload/v1645222006/Blooks/yellowBird.svg", Cheats.flappy);
         addMode("Settings", null, Cheats.settings, true);
-        
+
         dragElement(controls, guiWrapper);
         dragElement(dragButton, guiWrapper);
-        
+
         function dragElement(element, parent) {
             var pos1 = 0,
                 pos2 = 0,
@@ -3483,12 +3497,12 @@
                 element.addEventListener("keyup", keyup);
             });
         }
-        
+
     });
     let img = new Image;
     img.src = "https://raw.githubusercontent.com/Blooket-Council/Blooket-Cheats/main/autoupdate/timestamps/gui.png?" + Date.now();
     img.crossOrigin = "Anonymous";
-    img.onload = function() {
+    img.onload = function () {
         const c = document.createElement("canvas");
         const ctx = c.getContext("2d");
         ctx.drawImage(img, 0, 0, this.width, this.height);
@@ -3503,13 +3517,16 @@
         let _, time = timeProcessed, error = "There was an error checking for script updates. Run cheat anyway?";
         try {
             [_, time, error] = decode.match(/LastUpdated: (.+?); ErrorMessage: "((.|\n)+?)"/);
-        } catch (e) {}
+        } catch (e) { }
         if ((latestProcess = parseInt(time)) <= timeProcessed || iframe.contentWindow.confirm(error)) cheat();
     }
     img.onerror = img.onabort = () => {
         img.onerror = img.onabort = null;
         cheat();
         let iframe = document.querySelector("iframe");
-        iframe.contentWindow.alert("Made By Kleine_Lars")
+        iframe.contentWindow.alert("It seems the GitHub is either blocked or down.\n\nIf it's NOT blocked, join the Discord server for updates\nhttps://discord.gg/eWYea4UeTJ\n(The cheat will still run after this alert)")
     }
 })();
+
+
+
